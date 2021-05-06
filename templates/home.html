@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> 
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+  <link href="/static/login.css" rel="stylesheet" >
+  
+</head>
+<body>
+    <div class="dropdown" >
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+          <a href="/login1" method='POST'>Login</a>
+          <a href="/signup1">Sign UP</a>
+        </div>
+    </div>
+    <div id="login">
+      <br>
+      <br>
+        <h3 class="text-center text-white pt-5">Home Page</h3>
+        <h2 class="text-center text-white pt-10" >
+          <form action="/login1" class="inline">
+            <button class="float-center submit-button" id="button1" >LOGIN</button>
+          </form>
+          <form action="/signup1" class="inline">
+            <button class="float-center submit-button" id="button1" >SIGN UP</button>
+          </form>
+        </h2>
+      </div>
+</body>
+</html>

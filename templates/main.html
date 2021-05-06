@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electricity Demand</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> 
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+  <link href="/static/main.css" rel="stylesheet" >
+  
+</head>
+<body>
+    <div class="dropdown" >
+        <button class="dropbtn">Menu</button>
+          <div class="dropdown-content">
+            <a href="/login1" method='POST'>Logout</a>
+          </div>
+    </div>
+          <form action="/main_predict" class="form1" method="POST">
+            <br>
+            <h3 ><div class="main" >Predict Load</div></h3>
+            <br>
+              <div class="row">
+                <div class="col-3"> 
+                  <label><b>   Generation biomass:</b></label><br>
+                  <input type="number" step="0.01" name="gen_biomass" required>
+                </div>
+                <div class="col-3"> 
+                  <label><b>Generation fossil brown coal/lignite</b></label><br>
+                  <input type="number" step="0.01" name="gen_fosil_coal" required>
+                </div>
+                <div class="col-3"> 
+                  <label><b>Generation fossil gas</b></label><br>
+                  <input type="number" step="0.01" name="gen_fosil_gas" required>
+                </div>
+                <div class="col-3"> 
+                  <label><b>forecast wind onshore day ahead</b></label><br>
+                  <input type="number" step="0.01" name="for_wind_day_ahead" required>
+                </div>
+
+
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-3"> 
+                  <label><b>Generation fossil hard coal</b></label><br>
+                  <input type="number" step="0.01" name="gen_fosil_hard_coal" required>
+                </div>
+                <div class="col-3"> 
+                  <label><b>Generation fossil oil</b></label><br>
+                  <input type="number" step="0.01" name="gen_fosill_oil" required>
+                </div>
+                <div class="col-3"> 
+                  <label><b>Generation hydro pumped storage consumption</b></label><br>
+                  <input type="number" step="0.01" name="gen_hydro_storage" required>
+                </div>
+                <div class="col-3"> 
+                  <label><b>price day ahead</b></label><br>
+                  <input type="number" step="0.01" name="price_ahead" required>
+                </div>
+              </div>
+
+              <br>
+              <div class="row">
+                <div class="col-3"> 
+                  <label><b>Generation hydro run-of-river and poundage</b></label><br>
+                  <input type="number" step="0.01" name="gen_hydro_run_river" required>
+                </div>
+
+                <div class="col-3"> 
+                  <label><b>Generation hydro water reservoir</b></label><br>
+                  <input type="number" step="0.01" name="gen_hydro_water" required>
+                </div>
+                
+                <div class="col-3"> 
+                  <label><b>Generation nuclear</b></label><br>
+                  <input type="number" step="0.01" name="gen_nuclear" required>
+                </div>
+                <div class="col-3"> 
+                  <label><b>price actual</b></label><br>
+                  <input type="number" step="0.01" name="price" required>
+                </div>
+
+
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-3"> 
+                  <label><b>Generation other</b></label><br>
+                  <input type="number" step="0.01" name="gen_other" required>
+                </div>
+
+                <div class="col-3"> 
+                  <label><b>Generation other renewable</b></label><br>
+                  <input type="number" step="0.01" name="gen_other_renewable" required>
+                </div>
+                
+                <div class="col-3"> 
+                  <label><b>Generation solar</b></label><br>
+                  <input type="number" step="0.01" name="gen_solar" required>
+                </div>
+                <div class="col-3"> 
+                  <label><b>year</b></label><br>
+                  <input type="number" step="0.01" name="year" required>
+                </div>
+
+              </div>
+              
+              <br>
+              <div class="row">
+
+                <div class="col-3"> 
+                  <label><b>Generation waste</b></label><br>
+                  <input type="number" step="0.01" name="gen_waste" required>
+                </div>
+
+                <div class="col-3"> 
+                  <label><b>Generation wind onshore</b></label><br>
+                  <input type="number" step="0.01" name="gen_wind_onshore" required>
+                </div>
+                
+                <div class="col-3"> 
+                  <label><b>forecast solar day ahead</b></label><br>
+                  <input type="number" step="0.01" name="for_solar_day_ahead" required>
+                </div>
+                <div class="col-3"> 
+                  <label><b>Select a month from list:</b></label>
+                  <br>
+                  <select name="month">
+                      <option value=1>January</option>
+                      <option value=2>February</option>
+                      <option value=3>March</option>
+                      <option value=4>April</option>
+                      <option value=5>May</option>
+                      <option value=6>June</option>
+                      <option value=7>July</option>
+                      <option value=8>Auguest</option>
+                      <option value=9>September</option>
+                      <option value=10>October</option>
+                      <option value=11>November</option>
+                      <option value=12>December</option>
+                  </select>
+                </div>
+                <div class="col-3"> 
+                  <label><b>Select a week from list:</b></label>
+                  <br>
+                  <select name="week">
+                      <option value=0>Sunday</option>
+                      <option value=1>Monday</option>
+                      <option value=2>Tuesday</option>
+                      <option value=3>Wednesday</option>
+                      <option value=4>Thursday</option>
+                      <option value=5>Friday</option>
+                      <option value=6>Saturday</option>
+                  </select>
+              </div> 
+              <br>
+              <br>
+              <h3>{{pred}}</h3>
+          </div>
+            <br>
+            <h2 class="text-right text-white pt-10" >   
+                <button class="float-center submit-button" id="button1" >Predict</button>
+            </h2>
+      </form>
+  </div>
+</body>
+</html>
