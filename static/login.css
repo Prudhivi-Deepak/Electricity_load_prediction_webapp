@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #17a2b8;
+  background-image: url(./img/electricity-demand.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  width: 150vh;
+}
+#login .container #login-row #login-column #login-box {
+  margin-top: 20px;
+  max-width: 70%;
+  min-width: 10%;
+  height: 92%;
+  height: auto;
+  width: auto;
+  border: 1px solid #9C9C9C;
+  background-color:rgb(90, 252, 131);
+  float: left;
+  position: relative;
+}
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px 50px;
+  height: auto;
+}
+#login .container #login-row #login-column #login-box #login-form #register-link {
+  margin-top: -15px;
+}
+
+#button1{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#button1:hover{
+  background-color: lightgreen;
+}
+
+.dropbtn {
+  border-radius: 8px;
+  background-color: #04AA6D;
+  color: white;
+  padding: 13px;
+  font-size: 16px;
+  border: 10px;
+}
+.dropdown {
+  position: relative;
+  display:inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  border-radius: 3px;
+  color: black;
+  padding: 10px ;
+  background-color: aqua;
+  display: block;
+}
+.dropdown-content a:hover {background-color: rgb(113, 181, 241);}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
